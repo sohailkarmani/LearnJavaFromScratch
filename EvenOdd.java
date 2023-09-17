@@ -10,6 +10,7 @@ public class EvenOdd {
         int num = scan.nextInt();
         // method calling
         findEvenOdd(num);
+        scan.close();
     }
 
     // user defined method
@@ -20,4 +21,5 @@ public class EvenOdd {
         else
             System.out.println(num + " is odd");
     }
+    
 }
