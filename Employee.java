@@ -1,64 +1,54 @@
 
-class EmployeeData {
-    private int ID;
-    private String FName;
-    private String LName;
-    private int Salary;
+public class Employee {
+    private int id;
+    private String name;
+    private double salary;
 
-    EmployeeData(int id, String fName, String lName, int salary) {
-        this.FName = fName;
-        this.ID = id;
-        this.LName = lName;
-        this.Salary = salary;
-
+    // Constructor
+    public Employee(int id, String name, double salary) {
+        this.id = id;
+        this.name = name;
+        this.salary = salary;
     }
 
-    public int getID() {
-        return ID;
-    }
-
-    public String getFName() {
-        return FName;
-    }
-
-    public String getLName() {
-        return LName;
+    // Getter methods
+    public int getId() {
+        return id;
     }
 
     public String getName() {
-        return FName+" "+LName;
+        return name;
     }
 
-    public int getSalary() {
-        return Salary;
+    public double getSalary() {
+        return salary;
     }
 
-    public void setSalary(int salary) {
-        this.Salary = salary;
+    // Method to raise salary by a percentage
+    public void raiseSalary(double percent) {
+        if (percent > 0) {
+            double raiseAmount = (percent / 100) * salary;
+            salary += raiseAmount;
+        } else {
+            System.out.println("Invalid percentage. Salary not increased.");
+        }
     }
 
-    public int getAnnualSalary() {
-        return Salary * 12;
+    // Method to display employee information
+    public void displayInfo() {
+        System.out.println("Employee ID: " + id);
+        System.out.println("Employee Name: " + name);
+        System.out.println("Employee Salary: $" + salary);
     }
-    public int raiseSalary(int percent){
-        return Salary+percent;
-    }
-
-}
-
-public class Employee {
 
     public static void main(String[] args) {
-        EmployeeData e1 = new EmployeeData(16, "Sohail", "Karmani", 50000);
+        // Example usage of the Employee class
+        Employee employee = new Employee(1, "John Doe", 50000.0);
+        employee.displayInfo();
 
-        System.out.println("The employee ID is  :" + e1.getID());
-        System.out.println("The employee first name is  :" + e1.getFName());
-        System.out.println("The employee last name is :" + e1.getLName());
-        System.out.println("The employee full name is :" + e1.getName());
-        System.out.println("Salary  :" + e1.getSalary());
-        System.out.println("Annual salary is :" + e1.getAnnualSalary());
-        e1.raiseSalary(5000);
-        System.out.println(e1.raiseSalary(5000));
-
+        // Raise salary by 10%
+        employee.raiseSalary(50);
+        System.out.println("After raised salary");
+        employee.displayInfo();
     }
 }
