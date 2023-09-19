@@ -40,6 +40,9 @@ class EmployeeData {
     public int getAnnualSalary() {
         return Salary * 12;
     }
+    public int raiseSalary(int percent){
+        return Salary+percent;
+    }
 
 }
 
@@ -54,6 +57,8 @@ public class Employee {
         System.out.println("The employee full name is :" + e1.getName());
         System.out.println("Salary  :" + e1.getSalary());
         System.out.println("Annual salary is :" + e1.getAnnualSalary());
+        e1.raiseSalary(5000);
+        System.out.println(e1.raiseSalary(5000));
 
     }
 }
