@@ -4,7 +4,7 @@ public class InvoiceItem {
     private int qty;
     private double unitprice;
 
-    // constructor
+    // constructor to initialize the value
     public InvoiceItem(int id, String desc, int qty, double unitprice) {
         this.id = id;
         this.desc = desc;
@@ -14,7 +14,6 @@ public class InvoiceItem {
     }
 
     // getter methods
-
     int getId() {
         return id;
     }
