@@ -49,6 +49,7 @@ public class InvoiceItem {
 
     public static void main(String[] args) {
         InvoiceItem a1 = new InvoiceItem(16, "hello", 4, 500);
+        a1.toString();
         a1.displayItams();
         System.out.println("Total price is : "+a1.getTotal());
 
