@@ -10,7 +10,6 @@ public class InvoiceItem {
         this.desc = desc;
         this.qty = qty;
         this.unitprice = unitprice;
-
     }
 
     // getter methods
@@ -51,7 +50,6 @@ public class InvoiceItem {
         InvoiceItem a1 = new InvoiceItem(16, "hello", 4, 500);
         a1.toString();
         a1.displayItams();
-        System.out.println("Total price is : "+a1.getTotal());
-
+        System.out.println("Total price is : " + a1.getTotal());
     }
 }
