@@ -21,5 +21,13 @@ class Students{
         s1.StudentCity="Hyderabad";
         s1.study();
         s1.ShowInfo();
+
+        Students s2=new Students();
+        s2.StudentID=15;
+        s2.StudentName="Sandeep";
+        s2.StudentCity="Jamshoro";
+
+        s2.study();
+        s2.ShowInfo();
     }
 }
